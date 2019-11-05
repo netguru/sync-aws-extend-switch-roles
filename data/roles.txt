@@ -1,0 +1,43 @@
+[organization1]
+aws_account_id = your-account-alias
+
+[Org1-Account1-Role1]
+role_arn = arn:aws:iam::123456789012:role/Role1
+source_profile = organization1
+
+[Org1-Account1-Role2]
+aws_account_id = 123456789012
+role_name = Role2
+source_profile = organization1
+
+[Org1-Account2-Role1]
+aws_account_id = 210987654321
+role_name = Role1
+source_profile = organization1
+
+[baseaccount2]
+aws_account_id = 000000000000
+
+[Base2-Role1]
+role_arn = arn:aws:iam::234567890123:role/Role1
+source_profile = baseaccount2
+
+[AnotherRole]
+role_name = SomeOtherRole
+aws_account_id = account-3-alias
+
+;
+; target_role_name example
+;
+[Org2-BaseAccount]
+aws_account_id = 222200000000
+target_role_name = Developer
+
+[Org2-Account1-Developer]
+aws_account_id = 222200001111
+source_profile = Org2-BaseAccount
+
+[Org2-Account2-Manager]
+aws_account_id = 222200002222
+role_name = Manager ; overrides target role name
+source_profile = Org2-BaseAccount
