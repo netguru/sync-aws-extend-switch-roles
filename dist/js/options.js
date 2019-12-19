@@ -11,10 +11,10 @@ window.onload = function() {
     var regex = new RegExp(expression)
     if (rawStrConfigUrl.match(regex)) {
       console.log(logFmt('url does match regex: '+rawStrConfigUrl))
-      msgSpan.innerHTML = 'url: <b>'+rawStrConfigUrl+'</b> does match regex.';
+      msgSpan.innerHTML = '<span style="color:#11dd18">ALL OK</span> - url: <b>'+rawStrConfigUrl+'</b> does match regex.';
     } else {
       console.log(logFmt('url: '+rawStrConfigUrl+' does not match regex'))
-      msgSpan.innerHTML = 'url: <b>'+rawStrConfigUrl+'</b> does <span style="color:#dd1111">NOT</span> match regex!';
+      msgSpan.innerHTML = '<span style="color:#dd1111">ERROR</span> - url: <b>'+rawStrConfigUrl+'</b> does <span style="color:#dd1111">NOT</span> match regex!';
       return
     }
 
