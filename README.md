@@ -19,6 +19,10 @@ That's why we decided to store it in a private Github repo ([and yeah - everyone
 
 The extension supports the background sync, on-demand sync, and notifications.
 
+**NOTE:**
+
+it's an extension to the extension, meaning ***sync-aws-extend-switch-roles*** is *NOT* a replacement but it injects some data into **AWS Extend Switch Roles**
+
 It's not perfect, there are plenty of ideas on how to improve it, but it does the job in its current shape and we've decided to share it with the broader community.
 
 A great thanks to [tilfin](https://github.com/tilfin) for creating the AWS Extend Switch Roles!
